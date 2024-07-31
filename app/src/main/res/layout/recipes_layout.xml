@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/card_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/glutenfree" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/card_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxWidth="200dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="Card Title"
+                android:textStyle="bold" />
+
+
+            <ScrollView
+                android:id="@+id/card_description_scroller"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/card_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:scrollbars="vertical"
+                    android:text="Experience the rich and bold flavors of our Spicy Chicken Curry, a delectable dish featuring tender chicken pieces simmered in a thick, spicy tomato sauce. This curry is infused with aromatic spices like cumin, coriander, and turmeric, giving it a vibrant color and a tantalizing aroma. The heat from the chilies adds a fiery kick, balanced perfectly by the sweetness of caramelized onions and the tang of tomatoes. Each bite is a burst of flavors, from the deep, earthy notes of the spices to the juicy, succulent chicken. Ideal for those who love a bit of heat, this dish is best served with steamed rice or warm naan bread, making it a perfect meal for any occasion. Dive into this culinary delight and savor the perfect blend of spices and textures." />
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/cooking_time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:text="5"
+
+                    android:textColor="#E07921"
+                    android:textSize="13dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="min"
+                    android:textColor="#E07921"
+                    android:textSize="13dp"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_weight="1"
+                    android:src="@drawable/fire" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:text="5"
+                    android:textColor="#E07921"
+
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="cal"
+
+                    android:textColor="#E07921"
+                    android:textSize="13dp"
+
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
