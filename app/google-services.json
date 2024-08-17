@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "982812638995",
+    "firebase_url": "https://tasebase-485a6-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "tasebase-485a6",
+    "storage_bucket": "tasebase-485a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982812638995:android:fdf399e0fb163abb76e4e6",
+        "android_client_info": {
+          "package_name": "com.example.tastebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbfGmo83qfUfk-2MJBWaDuGqKvIfB8OMk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

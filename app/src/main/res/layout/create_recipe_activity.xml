@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white"
+    tools:context="views.activities.CreateRecipeActivity">
 
->
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-         >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,8 +34,30 @@
                 android:id="@+id/editTextRecipeName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter recipe name"
+                android:hint="Enter name"
                 android:inputType="text" />
+
+
+            <!-- Recipe Description Field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp"
+
+                android:text="Recipe Descriptoin"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/recipe_descriptoin"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:gravity="top"
+                android:hint="Enter descriptoin"
+                android:inputType="textMultiLine"
+                android:maxLength="130" />
+
 
             <!-- Ingredients Field -->
             <TextView
@@ -52,7 +74,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="top"
-                android:hint="Enter ingredient and amount (e.g., sugar 1 cup)"                 android:inputType="textMultiLine"
+                android:hint="Enter ingredient and amount (e.g., sugar 1 cup)"
+                android:inputType="textMultiLine"
                 android:minLines="4" />
 
             <!-- Preparation Steps Field -->
@@ -65,7 +88,8 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-                  <EditText
+            <!-- Cooking Time Field -->
+            <EditText
                 android:id="@+id/editTextPreparationSteps"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,7 +98,6 @@
                 android:inputType="textMultiLine"
                 android:minLines="6" />
 
-            <!-- Cooking Time Field -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -91,7 +114,7 @@
                 android:hint="Enter cooking time"
                 android:inputType="number" />
 
-            <!-- Cooking Time Field -->
+            <!-- Calories Field -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -113,13 +136,11 @@
                 android:layout_width="359dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="8dp"
-                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                  />
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp" />
 
 
-            <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -129,8 +150,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginEnd="16dp">
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -141,18 +162,20 @@
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:id="@+id/imageViewRecipe1"
+                        android:id="@+id/dish_image"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginBottom="8dp"
                         android:contentDescription="Selected Image Preview"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/breakfast" />
+                        android:src="@drawable/upload_image" />
 
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/buttonUploadImage1"
+                    <ImageView
+                        android:id="@+id/dish_img_btn"
                         android:layout_width="90dp"
                         android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:src="@drawable/image_recipe_search" />
                 </LinearLayout>
 
@@ -166,22 +189,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingBottom="4dp"
-                        android:text="Upload dish image"
+                        android:text="Upload recipe image"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:id="@+id/imageViewRecipe2"
+                        android:id="@+id/recipe_image"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginBottom="8dp"
                         android:contentDescription="Selected Image Preview"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/dessert" />
+                        android:src="@drawable/upload_image" />
 
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/buttonUploadImage2"
+                    <ImageView
+                        android:id="@+id/recipe_img_btn"
                         android:layout_width="90dp"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:layout_height="wrap_content"
                         android:src="@drawable/image_recipe_search" />
                 </LinearLayout>
@@ -194,8 +219,7 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                />
+                android:layout_marginBottom="8dp" />
 
             <!-- Submit Button -->
             <Button
@@ -203,9 +227,19 @@
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="0dp"
+                android:enabled="false"
+                android:textColor="@color/white"
                 android:backgroundTint="@color/black"
                 android:text="Submit" />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
         </LinearLayout>
     </ScrollView>
 
