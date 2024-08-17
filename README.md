@@ -13,7 +13,7 @@ your own collection of culinary delights.
 ![2](https://github.com/user-attachments/assets/2a4d048c-5936-4e67-bdc2-ea0a09385bf1)
 
 
-# Registeration
+# Registration
 ![1](https://github.com/user-attachments/assets/142206a0-c3ef-4cab-bcf6-2fd803bff342)
 
 
