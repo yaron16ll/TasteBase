@@ -1,12 +1,14 @@
 Welcome to TasteBase, your personalized recipe library where culinary
 
-enthusiasts and home cooks can explore, share, and meticulously organize
+enthusiasts and home cooks can explore and meticulously organize
 
 their favorite dishes. TasteBase is a comprehensive database of user
 
 -generated recipes, offering you the ultimate platform to build and maintain
 
 your own collection of culinary delights.
+
+Using firebase realtime-database and firebase storage
 
 
 # Login
